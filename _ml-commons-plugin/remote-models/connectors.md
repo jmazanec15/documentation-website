@@ -249,6 +249,12 @@ POST /_plugins/_ml/connectors/_create
 ```
 {% include copy-curl.html %}
 
+#### Reducing Memory Footprint with *faiss*'s IVFPQ algorithm
+
+The Cohere v3 embedding model has been optimized for IVFPQ-based indices with the INNERPRODUCT metric space. IVF is an approximate nearest neighbor algorithm that partitions the vector space and searches a fixed number of partitions at search time. PQ is an encoding scheme to reduce the memory footprint of the index. For more details, see https://opensearch.org/docs/latest/search-plugins/knn/knn-index/#supported-faiss-methods. 
+
+See https://opensearch.org/docs/latest/search-plugins/knn/approximate-knn/#building-a-k-nn-index-from-a-model for how to build an IVFPQ index. To start, the following parameters are good: `ivf_nlist=1024`, `ivf_nprobes=128`, `pq_code_size=8`, `pq_m=256`. The amount of training data to use is `1000*ivf_nlist`. For the default parameters, this would be roughly 1M vectors (ref: https://github.com/facebookresearch/faiss/wiki/FAQ#how-many-training-points-do-i-need-for-k-means).
+
 ### Amazon Bedrock connector
 
 You can use the following example request to create a standalone Amazon Bedrock connector:
