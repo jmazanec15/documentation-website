@@ -1,0 +1,12 @@
+---
+layout: default
+title: Space Type
+nav_order: 4
+has_children: false
+has_toc: false
+parent: knn_vector
+---
+
+## SpaceType
+
+TODO
