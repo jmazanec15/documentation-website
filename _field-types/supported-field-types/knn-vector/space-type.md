@@ -1,10 +1,13 @@
 ---
 layout: default
-title: Space Type
+title: Space Types
 nav_order: 4
 has_children: false
 has_toc: false
-parent: knn_vector
+parent: Vector
+redirect_from:
+  - /opensearch/supported-field-types/vector/space-types
+  - /field-types/vector/space-types
 ---
 
 ## SpaceType

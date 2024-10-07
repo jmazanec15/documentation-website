@@ -4,6 +4,7 @@ title: Using raw vectors
 parent: Tutorials
 nav_order: 20
 has_children: false
+grand_parent: Vector Search
 ---
 
 # Using raw vectors for neural sparse search

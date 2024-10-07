@@ -2,6 +2,7 @@
 layout: default
 title: Querying Index
 nav_order: 8
+parent: Vector Search
 ---
 
 

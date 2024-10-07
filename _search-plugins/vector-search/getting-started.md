@@ -1,12 +1,10 @@
 ---
 layout: default
-title: Neural search
-nav_order: 25
-has_children: false
-has_toc: false
-redirect_from: 
-  - /neural-search-plugin/index/
+title: Getting Started
+nav_order: 1
+parent: Vector Search
 ---
+
 
 # Neural search
 
@@ -35,7 +33,7 @@ Once you set up an ML model, choose one of the following search methods to use y
 
 ### Semantic search
 
-Semantic search uses dense retrieval based on text embedding models to search text data. For detailed setup instructions, see [Semantic search]({{site.url}}{{site.baseurl}}/search-plugins/semantic-search/). 
+Semantic search uses dense retrieval based on text embedding models to search text data. For detailed setup instructions, see [Semantic search]({{site.url}}{{site.baseurl}}/search-plugins/semantic-search/).
 
 ### Hybrid search
 

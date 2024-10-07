@@ -5,6 +5,7 @@ nav_order: 20
 parent: Tutorials
 has_children: false
 has_math: true
+grand_parent: Vector Search
 ---
 
 # k-NN search with filters

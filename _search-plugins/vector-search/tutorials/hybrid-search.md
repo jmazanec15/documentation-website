@@ -4,6 +4,7 @@ title: Hybrid search
 has_children: false
 nav_order: 60
 parent: Tutorials
+grand_parent: Vector Search
 ---
 
 # Hybrid search

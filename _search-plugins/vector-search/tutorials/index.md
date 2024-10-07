@@ -3,8 +3,9 @@ layout: default
 title: Tutorials
 nav_order: 18
 has_children: true
+parent: Vector Search
 redirect_from:
-- /vector-search/tutorials/
+  - /search-plugins/vector-search/index/
 ---
 
 # Vector Search Tutorials 

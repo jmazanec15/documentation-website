@@ -2,6 +2,7 @@
 layout: default
 title: Performance tuning
 nav_order: 16
+parent: Vector Search
 ---
 
 # Performance tuning

@@ -1,6 +1,8 @@
 ---
 layout: default
 title: Text chunking
+parent: Tutorials
+grand_parent: Vector Search
 nav_order: 65
 ---
 

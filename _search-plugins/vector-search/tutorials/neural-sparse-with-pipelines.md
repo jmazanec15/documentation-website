@@ -4,6 +4,7 @@ title: Configuring ingest pipelines
 parent: Tutorials
 nav_order: 10
 has_children: false
+grand_parent: Vector Search
 ---
 
 # Configuring ingest pipelines for neural sparse search

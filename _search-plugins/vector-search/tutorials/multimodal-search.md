@@ -4,6 +4,7 @@ title: Multimodal search
 nav_order: 40
 has_children: false
 parent: Tutorials
+grand_parent: Vector Search
 ---
 
 # Multimodal search

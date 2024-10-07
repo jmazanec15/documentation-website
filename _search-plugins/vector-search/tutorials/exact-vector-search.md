@@ -1,7 +1,8 @@
 ---
 layout: default
-title: Binary vector search
+title: Exact search
 nav_order: 16
 parent: Tutorials
+grand_parent: Vector Search
 has_children: false
 ---

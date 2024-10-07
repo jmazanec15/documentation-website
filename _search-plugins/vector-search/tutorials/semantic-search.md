@@ -4,6 +4,7 @@ title: Neural search tutorial
 has_children: false
 nav_order: 30
 parent: Tutorials
+grand_parent: Vector Search
 ---
 
 # Neural search tutorial

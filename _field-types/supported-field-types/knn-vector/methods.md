@@ -1,10 +1,13 @@
 ---
 layout: default
-title: Method
+title: Methods
 nav_order: 5
 has_children: false
 has_toc: false
-parent: knn_vector
+parent: Vector
+redirect_from:
+  - /opensearch/supported-field-types/vector/methods
+  - /field-types/vector/methods
 ---
 
 ## Methods

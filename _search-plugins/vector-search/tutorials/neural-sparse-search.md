@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Neural sparse search
+title: Sparse Vector Search
 nav_order: 50
 has_children: false
 parent: Tutorials
+grand_parent: Vector Search
 ---
 
 # Neural sparse search
