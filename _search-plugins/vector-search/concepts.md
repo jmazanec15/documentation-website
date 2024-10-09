@@ -5,6 +5,10 @@ nav_order: 2
 parent: Vector Search
 ---
 
+# Concepts
+
+Concepts to help you get started with vector search
+
 1. vector search
 2. k-NN
 3. ANN
