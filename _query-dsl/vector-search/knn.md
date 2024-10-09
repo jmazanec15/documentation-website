@@ -1,6 +1,6 @@
 ---
 layout: default
-title: KNN
+title: k-NN
 parent: Vector Search
 nav_order: 1
 ---

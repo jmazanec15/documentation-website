@@ -2,7 +2,7 @@
 layout: default
 title: Vector Search Settings
 parent: Configuring OpenSearch
-nav_order: 18
+nav_order: 85
 redirect_from:
 - /opensearch/configuration/vector-search
 ---

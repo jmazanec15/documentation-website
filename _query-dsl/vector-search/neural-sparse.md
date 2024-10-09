@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Neural Sparse
+title: neural-sparse
 parent: Vector Search
 nav_order: 3
 ---
