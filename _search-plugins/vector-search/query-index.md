@@ -26,9 +26,9 @@ GET my-knn-index-1/_search
 
 <details>
 	<summary>Python Snippet</summary>
-	```python
+	~~~ python
     print("Hello python")
-    ```
+    ~~~
 </details>
 
 Filters

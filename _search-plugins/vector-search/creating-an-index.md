@@ -37,32 +37,3 @@ PUT /test-index
 }
 ```
 {% include copy-curl.html %}
-
-To specify a method, 
-```json
-PUT /test-index
-{
-  "settings": {
-    "index": {
-      "knn": true
-    }
-  },
-  "mappings": {
-    "properties": {
-      "my_vector1": {
-        "type": "knn_vector",
-        "dimension": 3,
-        "space_type": "l2",
-        "method": {
-          "name": "hnsw",
-          "engine": "lucene",
-          "parameters": {
-            "ef_construction": 128,
-            "m": 24
-          }
-        }
-      }
-    }
-  }
-}
-```

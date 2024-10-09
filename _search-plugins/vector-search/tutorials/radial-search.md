@@ -30,7 +30,7 @@ POST /products-shirts/_search
 
 <details>
 	<summary>Python Snippet</summary>
-	```python
+	~~~ python
     print("Hello python")
-    ```
+    ~~~
 </details>

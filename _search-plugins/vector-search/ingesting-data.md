@@ -35,8 +35,8 @@ POST _bulk
 
 <details>
 	<summary>Python Snippet</summary>
-	```python
+	~~~ python
     print("Hello python")
-    ```
+    ~~~ 
 </details>
 
