@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Neural search tutorial
+title: Semantic Search
 has_children: false
-nav_order: 30
+nav_order: 10
 parent: Tutorials
 grand_parent: Vector Search
 ---

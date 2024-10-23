@@ -1,7 +1,7 @@
 ---
 layout: default
-title: k-NN search with filters
-nav_order: 20
+title: Filtered Vector Search
+nav_order: 1
 parent: Tutorials
 has_children: false
 has_math: true

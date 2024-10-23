@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Using raw vectors
+title: Auto-embed with a Dense Model
 parent: Tutorials
-nav_order: 20
+nav_order: 11
 has_children: false
 grand_parent: Vector Search
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Disk-based vector search
-nav_order: 16
+title: Disk Based Vector search
+nav_order: 6
 parent: Tutorials
 grand_parent: Vector Search
 has_children: false

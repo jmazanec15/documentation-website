@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Sparse Vector Search
-nav_order: 50
+nav_order: 9
 has_children: false
 parent: Tutorials
 grand_parent: Vector Search

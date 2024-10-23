@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Hybrid search
+title: Hybrid Search
 has_children: false
-nav_order: 60
+nav_order: 7
 parent: Tutorials
 grand_parent: Vector Search
 ---

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Radial Search
-nav_order: 99
+nav_order: 8
 parent: Tutorials
 has_children: false
 has_math: true

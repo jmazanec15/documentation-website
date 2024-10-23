@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Configuring ingest pipelines
+title: Auto-embed with a Sparse Model
 parent: Tutorials
-nav_order: 10
+nav_order: 12
 has_children: false
 grand_parent: Vector Search
 ---

@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Text chunking
+title: Text Chunking
 parent: Tutorials
 grand_parent: Vector Search
-nav_order: 65
+nav_order: 14
 ---
 
 # Text chunking

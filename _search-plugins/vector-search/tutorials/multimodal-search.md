@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Multimodal search
-nav_order: 40
+title: Multimodal Search
+nav_order: 10
 has_children: false
 parent: Tutorials
 grand_parent: Vector Search
