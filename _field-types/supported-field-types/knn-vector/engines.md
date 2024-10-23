@@ -32,6 +32,22 @@ If memory is a concern, consider adding a PQ encoder to your HNSW or IVF index. 
 
 You can reduce the memory footprint by a factor of 2, with a minimal loss in search quality, by using the [`fp_16` encoder]({{site.url}}{{site.baseurl}}/search-plugins/knn/knn-vector-quantization/#faiss-16-bit-scalar-quantization). If your vector dimensions are within the [-128, 127] byte range, we recommend using the [byte quantizer]({{site.url}}{{site.baseurl}}/field-types/supported-field-types/knn-vector/#byte-vectors) to reduce the memory footprint by a factor of 4. To learn more about vector quantization options, see [k-NN vector quantization]({{site.url}}{{site.baseurl}}/search-plugins/knn/knn-vector-quantization/).
 
+### Engine recommendations
+
+In general, select NMSLIB or Faiss for large-scale use cases. Lucene is a good option for smaller deployments and offers benefits like smart filtering, where the optimal filtering strategy—pre-filtering, post-filtering, or exact k-NN—is automatically applied depending on the situation. The following table summarizes the differences between each option.
+
+| |  NMSLIB/HNSW |  Faiss/HNSW |  Faiss/IVF |  Lucene/HNSW |
+|:---|:---|:---|:---|:---|
+|  Max dimensions |  16,000  |  16,000 |  16,000 |  16,000 |
+|  Filter |  Post-filter |  Post-filter |  Post-filter |  Filter during search |
+|  Training required |  No |  No |  Yes |  No |
+|  Similarity metrics |  `l2`, `innerproduct`, `cosinesimil`, `l1`, `linf`  |  `l2`, `innerproduct` |  `l2`, `innerproduct` |  `l2`, `cosinesimil` |
+|  Number of vectors   |  Tens of billions |  Tens of billions |  Tens of billions |  Less than 10 million |
+|  Indexing latency |  Low |  Low  |  Lowest  |  Low  |
+|  Query latency and quality  |  Low latency and high quality |  Low latency and high quality  |  Low latency and low quality  |  High latency and high quality  |
+|  Vector compression  |  Flat |  Flat <br>Product quantization |  Flat <br>Product quantization |  Flat  |
+|  Memory consumption |  High  |  High <br> Low with PQ |  Medium <br> Low with PQ |  High  |
+
 ## Faiss
 
 ### Supported methods

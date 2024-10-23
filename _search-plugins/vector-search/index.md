@@ -21,50 +21,6 @@ In OpenSearch, you can generate vector embeddings, store those embeddings in an 
 - [Mappings and field types]()
 - [Query DSLs]()
 
-## Working with embeddings generated outside of OpenSearch
-
-After you generate vector embeddings, upload them to an OpenSearch index and search the index using vector search. For a complete example, see [Example](#example).
-
-### k-NN index
-
-To build a vector database and use vector search, you must specify your index as a [k-NN index]({{site.url}}{{site.baseurl}}/search-plugins/knn/knn-index/) when creating it by setting `index.knn` to `true`:
-
-```json
-PUT test-index
-{
-  "settings": {
-    "index": {
-      "knn": true,
-      "knn.algo_param.ef_search": 100
-    }
-  },
-  "mappings": {
-    "properties": {
-      "my_vector1": {
-        "type": "knn_vector",
-        "dimension": 1024,
-        "space_type": "l2",
-        "method": {
-          "name": "hnsw",
-          "engine": "nmslib",
-          "parameters": {
-            "ef_construction": 128,
-            "m": 24
-          }
-        }
-      }
-    }
-  }
-}
-```
-{% include copy-curl.html %}
-
-### k-NN vector
-
-You must designate the field that will store vectors as a [`knn_vector`]({{site.url}}{{site.baseurl}}/field-types/supported-field-types/knn-vector/) field type. OpenSearch supports vectors of up to 16,000 dimensions, each of which is represented as a 32-bit or 16-bit float.
-
-To save storage space, you can use `byte` or `binary` vectors. For more information, see [Byte vectors]({{site.url}}{{site.baseurl}}/field-types/supported-field-types/knn-vector#byte-vectors) and [Binary vectors]({{site.url}}{{site.baseurl}}/field-types/supported-field-types/knn-vector#binary-vectors).
-
 ### k-NN vector search
 
 Vector search finds the vectors in your database that are most similar to the query vector. OpenSearch supports the following search methods:
@@ -97,21 +53,6 @@ Method | Engine
 HNSW | NMSLIB, Faiss, Lucene
 IVF | Faiss 
 
-### Engine recommendations
-
-In general, select NMSLIB or Faiss for large-scale use cases. Lucene is a good option for smaller deployments and offers benefits like smart filtering, where the optimal filtering strategy—pre-filtering, post-filtering, or exact k-NN—is automatically applied depending on the situation. The following table summarizes the differences between each option.
-
-| |  NMSLIB/HNSW |  Faiss/HNSW |  Faiss/IVF |  Lucene/HNSW |
-|:---|:---|:---|:---|:---|
-|  Max dimensions |  16,000  |  16,000 |  16,000 |  16,000 |
-|  Filter |  Post-filter |  Post-filter |  Post-filter |  Filter during search |
-|  Training required |  No |  No |  Yes |  No |
-|  Similarity metrics |  `l2`, `innerproduct`, `cosinesimil`, `l1`, `linf`  |  `l2`, `innerproduct` |  `l2`, `innerproduct` |  `l2`, `cosinesimil` |
-|  Number of vectors   |  Tens of billions |  Tens of billions |  Tens of billions |  Less than 10 million |
-|  Indexing latency |  Low |  Low  |  Lowest  |  Low  |
-|  Query latency and quality  |  Low latency and high quality |  Low latency and high quality  |  Low latency and low quality  |  High latency and high quality  |
-|  Vector compression  |  Flat |  Flat <br>Product quantization |  Flat <br>Product quantization |  Flat  |
-|  Memory consumption |  High  |  High <br> Low with PQ |  Medium <br> Low with PQ |  High  |
 
 ### Example
 

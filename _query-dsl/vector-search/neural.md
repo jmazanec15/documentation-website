@@ -1,7 +1,7 @@
 ---
 layout: default
 title: neural
-parent: Vector Search
+parent: Vector Search Queries
 nav_order: 2
 ---
 

@@ -32,10 +32,6 @@ GET my-knn-index-1/_search
     ~~~
 </details>
 
-Filters
-2. Radial
-3. Nested
-4. Hybrid
-5. Re-scoring
-6. Re-ranking
-7. Exact search
+## Retrieving Data
+
+## Re-ranking results
