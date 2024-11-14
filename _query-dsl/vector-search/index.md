@@ -8,5 +8,4 @@ nav_order: 80
 
 # Vector Search Queries
 
-This page lists all Vector Search query types. To learn more about Vector Search in OpenSearch, see 
-[our comprehensive guide]().
+This page lists all Vector Search query types. To learn more about Vector Search in OpenSearch, see [our comprehensive guide]({{site.url}}{{site.baseurl}}/search-plugins/vector-search/).

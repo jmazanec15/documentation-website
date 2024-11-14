@@ -5,48 +5,36 @@ nav_order: 1
 parent: Vector Search
 ---
 
+# Getting Started
 
-# Neural search
+Welcome to this comprehensive guide on getting started with Vector Search in OpenSearch. This guide will provide you with a solid foundation for understanding and implementing Vector Search capabilities using OpenSearch.
 
-Neural search transforms text into vectors and facilitates vector search both at ingestion time and at search time. During ingestion, neural search transforms document text into vector embeddings and indexes both the text and its vector embeddings in a vector index. When you use a neural query during search, neural search converts the query text into vector embeddings, uses vector search to compare the query and document embeddings, and returns the closest results.
+## What is Vector Search?
 
-Before you ingest documents into an index, documents are passed through a machine learning (ML) model, which generates vector embeddings for the document fields. When you send a search request, the query text or image is also passed through the ML model, which generates the corresponding vector embeddings. Then neural search performs a vector search on the embeddings and returns matching documents.
+Vector search is a very powerful technique that can be used to find deeper semantic meaning between queries and locating the documents that match.
 
-## Prerequisite
+## What is Vector Search used for?
 
-Before using neural search, you must set up an ML model. When selecting a model, you have the following options:
+* RAG
+* Recommendation systems
+* Fraud detection
+* multi-modal search
+* conversational search
 
-- Use a pretrained model provided by OpenSearch. For more information, see [OpenSearch-provided pretrained models]({{site.url}}{{site.baseurl}}/ml-commons-plugin/pretrained-models/).
+## What Vector Search functionality does OpenSearch provide?
 
-- Upload your own model to OpenSearch. For more information, see [Custom local models]({{site.url}}{{site.baseurl}}/ml-commons-plugin/custom-local-models/).
+* text search
+* wide assortment of blah blah
+* automatic embedding generation
+* hybrid search filtering 
+* multi-vector
+* combination with other ir techniques
+* sparse vector search
 
-- Connect to a foundation model hosted on an external platform. For more information, see [Connecting to remote models]({{site.url}}{{site.baseurl}}/ml-commons-plugin/remote-models/index/).
+## How does it work?
 
+To get started with Vector Search, you first need to pick out an embedding model. There are a lot of options to choose from. Once selected, then you need to embed your data.
 
-## Tutorial
+Once you have your embedding model picked out and setup, you are ready to get started building your index in OpenSearch. First, you create an index with the configuration you want. Then you ingest your data into the index. After it is ingested, you can begin to search for your data!
 
-For a step-by-step tutorial, see [Neural search tutorial]({{site.url}}{{site.baseurl}}/search-plugins/neural-search-tutorial/).
-
-## Using an ML model for neural search
-
-Once you set up an ML model, choose one of the following search methods to use your model for neural search.
-
-### Semantic search
-
-Semantic search uses dense retrieval based on text embedding models to search text data. For detailed setup instructions, see [Semantic search]({{site.url}}{{site.baseurl}}/search-plugins/semantic-search/).
-
-### Hybrid search
-
-Hybrid search combines keyword and neural search to improve search relevance. For detailed setup instructions, see [Hybrid search]({{site.url}}{{site.baseurl}}/search-plugins/hybrid-search/).
-
-### Multimodal search
-
-Multimodal search uses neural search with multimodal embedding models to search text and image data. For detailed setup instructions, see [Multimodal search]({{site.url}}{{site.baseurl}}/search-plugins/multimodal-search/).
-
-### Sparse search
-
-Sparse search uses neural search with sparse retrieval based on sparse embedding models to search text data. For detailed setup instructions, see [Sparse search]({{site.url}}{{site.baseurl}}/search-plugins/neural-sparse-search/).
-
-### Conversational search
-
-With conversational search, you can ask questions in natural language, receive a text response, and ask additional clarifying questions. For detailed setup instructions, see [Conversational search]({{site.url}}{{site.baseurl}}/search-plugins/conversational-search/).
+[Create an index]()
