@@ -1,9 +1,9 @@
 ---
 layout: default
-title: Creating an Index
-nav_order: 3
-parent: Vector Search
-has_toc: true
+title: Dense Vectors
+nav_order: 4
+parent: Creating an Index
+grand_parent: Vector Search
 ---
 
 # Creating an Index
@@ -82,32 +82,3 @@ PUT _ingest/pipeline/my_embedding_pipeline
   ]
 }
 ```
-
-Then, to create the index, add the processor as a setting:
-```json
-PUT my_books
-{
-  "settings" : {
-      "index.knn" : "true",
-      "default_pipeline": "my_embedding_pipeline"
-  },
-  "mappings": {
-    "properties": {
-      "description": {
-        "type": "text"
-      },
-      "my_dense_vector": {
-        "type": "knn_vector",
-        "dimension": 16,
-        "space_type": "l2"
-      },
-      "my_sparse_vector": {
-        "type": "rank_features"
-      }
-    }
-  }
-}
-```
-
-Then, you can start ingesting your text data and the embeddings will be automatically generated!
-

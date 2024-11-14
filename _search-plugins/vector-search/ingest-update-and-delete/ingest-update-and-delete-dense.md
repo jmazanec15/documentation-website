@@ -1,9 +1,12 @@
 ---
 layout: default
-title: Ingest, Update and Delete
-nav_order: 5
-parent: Vector Search
+title: Dense Vectors
+nav_order: 4
+parent: Ingest, Update and Delete
+grand_parent: Vector Search
 ---
+
+
 
 # Ingest, Update, and Delete Data
 

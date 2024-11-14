@@ -7,34 +7,42 @@ parent: Vector Search
 
 # Getting Started
 
-Welcome to this comprehensive guide on getting started with Vector Search in OpenSearch. This guide will provide you with a solid foundation for understanding and implementing Vector Search capabilities using OpenSearch.
+Welcome to this comprehensive guide on getting started with Vector Search in OpenSearch. In this guide, we walk through understanding and implementing Vector Search capabilities using OpenSearch.
 
 ## What is Vector Search?
 
-Vector search is a very powerful technique that can be used to find deeper semantic meaning between queries and locating the documents that match.
+Vector search can generally be thought of as an information retrieval method that uses a machine learning model to embed data into a vector space that is designed to place similar pieces of objects "near" each other in the vector space. Vectors can be sparse (with many empty dimensions) or dense (with information in each dimension).  This technique excels at uncovering implicit semantics and deeper connections to provide users with results that better match their intent. 
 
 ## What is Vector Search used for?
 
-* RAG
+Vector search can be used in many different applications:
+* Retrieval augmented generation
 * Recommendation systems
 * Fraud detection
-* multi-modal search
-* conversational search
+* Multi-modal search
+* Conversational search
 
 ## What Vector Search functionality does OpenSearch provide?
 
-* text search
-* wide assortment of blah blah
-* automatic embedding generation
-* hybrid search filtering 
-* multi-vector
-* combination with other ir techniques
-* sparse vector search
+In OpenSearch, we provide a rich set of features that help users meet their workload requirements:
 
-## How does it work?
+1. Sparse and Dense vector support: Accommodate both high-dimensional sparse vectors and compact dense vectors
+2. Efficient Approximate and Exact Nearest Neighbor search: Efficient implements of nearest neighbor search allow OpenSearch to scale with your workload demands.
+3. Configurable vector compression: Reduce space requirements to cut costs while still retaining high-quality search relevance.
+4. Filtered search on vectors: Combine nearest neighbor search with traditional attribute-based filtering.
+5. Automatic embedding generation (neural search): OpenSearch can handle generating embeddings for you.
+6. Hybrid Search: Combine vector search with keyword-based search to get improved relevance.
+7. Multi-vector support through nested fields: Store and query multiple vectors per document, enabling complex, multi-faceted similarity searches.
 
-To get started with Vector Search, you first need to pick out an embedding model. There are a lot of options to choose from. Once selected, then you need to embed your data.
+Check out [our tutorials]() to see what else is possible with Vector search in OpenSearch.
 
-Once you have your embedding model picked out and setup, you are ready to get started building your index in OpenSearch. First, you create an index with the configuration you want. Then you ingest your data into the index. After it is ingested, you can begin to search for your data!
+## Getting started
 
-[Create an index]()
+To start using vector search in OpenSearch, follow these steps:
+
+1. Choose a model and setup an embedding pipeline
+2. Create an index
+3. Ingest your data
+4. Start searching!
+
+Let's dive in! [Choosing a model]()

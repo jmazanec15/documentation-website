@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Querying
-nav_order: 8
-parent: Vector Search
+title: Dense Vectors
+nav_order: 4
+parent: Query
+grand_parent: Vector Search
 ---
 
 # Querying data
